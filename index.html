@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html class="dark overflow-y-auto min-h-screen" lang="en" style="opacity: 1;"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base { html, body { margin: 0; padding: 0; min-height: 100vh; height: auto; } body { overscroll-behavior: auto; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { width: 10px; display: block; }</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#4edea3", "primary-fixed-dim": "#4edea3", "surface-tint": "#4edea3", "on-secondary": "#003640", "error": "#ffb4ab", "on-error": "#690005", "surface-bright": "#31394d", "on-primary": "#003824", "inverse-primary": "#006c49", "surface-variant": "#2d3449", "on-tertiary": "#472a00", "on-tertiary-container": "#523200", "inverse-on-surface": "#283044", "on-error-container": "#ffdad6", "outline-variant": "#3c4a42", "surface-container-lowest": "#060e20", "on-primary-fixed-variant": "#005236", "outline": "#86948a", "background": "#0b1326", "surface-container-high": "#222a3d", "surface-container-low": "#131b2e", "primary-fixed": "#6ffbbe", "inverse-surface": "#dae2fd", "surface-container-highest": "#2d3449", "on-tertiary-fixed-variant": "#653e00", "on-secondary-container": "#00424e", "on-primary-container": "#00422b", "secondary": "#4cd7f6", "primary-container": "#10b981", "secondary-fixed": "#acedff", "on-tertiary-fixed": "#2a1700", "on-background": "#dae2fd", "tertiary": "#ffb95f", "surface": "#0b1326", "tertiary-fixed": "#ffddb8", "tertiary-container": "#e29100", "secondary-fixed-dim": "#4cd7f6", "on-primary-fixed": "#002113", "on-surface": "#dae2fd", "secondary-container": "#03b5d3", "on-secondary-fixed": "#001f26", "on-surface-variant": "#bbcabf" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "margin": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg-mobile": ["Space Grotesk", "sans-serif"], "headline-md": ["Space Grotesk", "sans-serif"], "headline-lg": ["Space Grotesk", "sans-serif"], "body-sm": ["Plus Jakarta Sans", "sans-serif"], "label-lg": ["Plus Jakarta Sans", "sans-serif"], "body-lg": ["Plus Jakarta Sans", "sans-serif"], "label-md": ["Plus Jakarta Sans", "sans-serif"], "body-md": ["Plus Jakarta Sans", "sans-serif"], "headline-sm": ["Space Grotesk", "sans-serif"] }, "fontSize": { "headline-lg-mobile": ["2rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["2.25rem", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["3rem", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.5", "fontWeight": "400" }], "label-lg": ["0.875rem", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.6", "fontWeight": "400" }], "label-md": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }], "body-md": ["1rem", { "lineHeight": "1.5", "fontWeight": "400" }], "headline-sm": ["1.5rem", { "lineHeight": "1.4", "fontWeight": "600" }] } } } }</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface overflow-y-auto min-h-screen h-auto"><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-gutter py-20 -mt-20">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/10 via-surface to-surface z-0"></div>
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(78,222,163,0.15)_0,transparent_70%)] z-0"></div>
+<div class="max-w-6xl mx-auto text-center relative z-10 flex flex-col items-center gap-space-lg">
+<div class="inline-flex items-center gap-2 bg-surface-variant/80 backdrop-blur-md px-4 py-2 rounded-full border border-primary/20 text-primary text-label-lg font-['Plus_Jakarta_Sans']">
+<span class="material-symbols-outlined text-[18px]">public</span>
+<span class="">10th Grade Environmental Science</span>
+</div>
+<h1 class="text-6xl md:text-7xl font-headline-lg font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary mb-space-sm font-['Space_Grotesk']">OUR ENVIRONMENT</h1><h1 class="font-headline-lg md:text-6xl text-on-surface tracking-tight max-w-4xl font-['Space_Grotesk']">
+        Ecosystems: <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">The Web of Life</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl font-['Plus_Jakarta_Sans']">
+        Explore the intricate dance between living organisms and their physical environment. Understand energy flows, trophic levels, and the delicate balance of Earth's natural networks.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md mt-space-md">
+<a class="bg-primary text-on-primary px-space-xl py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] hover:bg-primary-fixed transition-all shadow-[0_0_20px_rgba(78,222,163,0.3)]" href="#habitat-diversity">
+          Explore Ecosystems
+        </a>
+<a class="bg-surface-variant/80 backdrop-blur-md text-on-surface border border-outline/20 px-space-xl py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] hover:bg-surface-bright transition-all" href="#food-web">
+          Interactive Food Web
+        </a>
+</div>
+<!-- Key Metrics Bar -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md w-full max-w-4xl mt-space-xl">
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-2xl border border-outline/10 hover:border-primary/40 transition-all hover:shadow-[0_0_30px_rgba(78,222,163,0.15)] group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-label-md text-on-surface-variant uppercase font-['Plus_Jakarta_Sans']">Factor Type 01</span>
+<span class="material-symbols-outlined text-primary text-[24px]">nest_eco_leaf</span>
+</div>
+<div class="font-headline-md text-on-surface group-hover:text-primary transition-colors font-['Space_Grotesk']">Biotic Components</div>
+<p class="text-body-sm text-on-surface-variant mt-2 font-['Plus_Jakarta_Sans']">Living flora, fauna, and microorganisms interacting in a shared habitat.</p>
+</div>
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-2xl border border-outline/10 hover:border-secondary/40 transition-all hover:shadow-[0_0_30px_rgba(76,215,246,0.15)] group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-label-md text-on-surface-variant uppercase font-['Plus_Jakarta_Sans']">Factor Type 02</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">thermostat</span>
+</div>
+<div class="font-headline-md text-on-surface group-hover:text-secondary transition-colors font-['Space_Grotesk']">Abiotic Factors</div>
+<p class="text-body-sm text-on-surface-variant mt-2 font-['Plus_Jakarta_Sans']">Sunlight, temperature, minerals, and water shaping physical conditions.</p>
+</div>
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-space-lg rounded-2xl border border-outline/10 hover:border-tertiary/40 transition-all hover:shadow-[0_0_30px_rgba(255,185,95,0.15)] group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="text-label-md text-on-surface-variant uppercase font-['Plus_Jakarta_Sans']">Thermodynamics</span>
+<span class="material-symbols-outlined text-tertiary text-[24px]">bolt</span>
+</div>
+<div class="font-headline-md text-on-surface group-hover:text-tertiary transition-colors font-['Space_Grotesk']">10% Energy Flow</div>
+<p class="text-body-sm text-on-surface-variant mt-2 font-['Plus_Jakarta_Sans']">Loss of energy at each trophic level following the 2nd law of thermodynamics.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Biotic & Abiotic Components Section -->
+<section class="py-space-xl max-w-7xl mx-auto px-gutter w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<span class="text-label-lg text-primary uppercase font-['Plus_Jakarta_Sans']">Core Foundation</span>
+<h2 class="font-headline-lg text-on-surface mt-2 font-['Space_Grotesk']">Biotic &amp; Abiotic Components</h2>
+</div>
+<p class="text-body-md text-on-surface-variant max-w-md font-['Plus_Jakarta_Sans']">Every ecosystem relies on the synchronized interaction between living communities and non-living environmental elements.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- Biotic Card -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-xl rounded-3xl border border-primary/20 hover:shadow-[0_0_40px_rgba(78,222,163,0.2)] transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10 group-hover:bg-primary/10 transition-all"></div>
+<div>
+<div class="flex items-center gap-space-md mb-space-lg">
+<div class="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">forest</span>
+</div>
+<div>
+<span class="text-label-md text-primary uppercase font-['Plus_Jakarta_Sans']">Living Organisms</span>
+<h3 class="font-headline-sm text-on-surface text-2xl font-['Space_Grotesk']">Biotic Factors</h3>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant mb-space-lg font-['Plus_Jakarta_Sans']">
+            Biotic components refer to all the living beings present in an ecosystem. They are typically categorized into producers (autotrophs), consumers (heterotrophs), and decomposers (saprotrophs).
+          </p>
+<div class="grid grid-cols-2 gap-space-md mb-space-lg">
+<div class="bg-surface/50 p-space-md rounded-xl">
+<span class="font-label-lg text-on-surface block mb-1 font-['Plus_Jakarta_Sans']">Producers</span>
+<span class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Plants, algae, cyanobacteria capturing solar energy.</span>
+</div>
+<div class="bg-surface/50 p-space-md rounded-xl">
+<span class="font-label-lg text-on-surface block mb-1 font-['Plus_Jakarta_Sans']">Consumers</span>
+<span class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Herbivores, carnivores, and omnivores feeding on others.</span>
+</div>
+</div>
+</div>
+<div class="h-48 rounded-2xl overflow-hidden relative border border-outline/10 group-hover:border-primary/30 transition-all">
+<img alt="Tropical Rainforest Canopy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UuzFTcWupqTWvY2juauli4x3p_yipEvyc-oQ2U-4Dk8OGDqQVYz4oiyG97bR20FtzbS2sy5C5QOIM-p_nWZJnW5K7S7gFCHoUTab7_9KVID4wzd8iHmHIjNUMLvoQuiPC4WuWzh6ecGmNDyfJJVypxJRs-EdGN0LIKsZGRCxxVChcOPbbclC7yhaZyLRfnlz8pzLNHyfK_Lhen00AUdWtWocWOUdV3_1GicE02_5zwfBEK-3s4-I0f5STX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/90 via-surface/30 to-transparent flex items-end p-space-md">
+<span class="text-label-md text-on-surface font-['Plus_Jakarta_Sans']">Interactive Habitat: Tropical Rainforest Canopy</span>
+</div>
+</div>
+</div>
+<!-- Abiotic Card -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-xl rounded-3xl border border-secondary/20 hover:shadow-[0_0_40px_rgba(76,215,246,0.2)] transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -z-10 group-hover:bg-secondary/10 transition-all"></div>
+<div>
+<div class="flex items-center gap-space-md mb-space-lg">
+<div class="w-14 h-14 rounded-2xl bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[32px]">wb_sunny</span>
+</div>
+<div>
+<span class="text-label-md text-secondary uppercase font-['Plus_Jakarta_Sans']">Physical &amp; Chemical Elements</span>
+<h3 class="font-headline-sm text-on-surface text-2xl font-['Space_Grotesk']">Abiotic Factors</h3>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant mb-space-lg font-['Plus_Jakarta_Sans']">
+            Abiotic components are the non-living chemical and physical parts of the environment that affect living organisms and the functioning of ecosystems.
+          </p>
+<div class="grid grid-cols-2 gap-space-md mb-space-lg">
+<div class="bg-surface/50 p-space-md rounded-xl">
+<span class="font-label-lg text-on-surface block mb-1 font-['Plus_Jakarta_Sans']">Climate &amp; Light</span>
+<span class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Temperature, sunlight duration, humidity, and rainfall.</span>
+</div>
+<div class="bg-surface/50 p-space-md rounded-xl">
+<span class="font-label-lg text-on-surface block mb-1 font-['Plus_Jakarta_Sans']">Substrate &amp; Water</span>
+<span class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Soil pH, mineral composition, and aquatic salinity levels.</span>
+</div>
+</div>
+</div>
+<div class="h-48 rounded-2xl overflow-hidden relative border border-outline/10 group-hover:border-secondary/30 transition-all">
+<img alt="Arid Desert Ecosystem" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XHj_lQMdJfKur0ZwiU2GnxcesO_9gCVqP_B0LSlZyuOMapFVcyrX_awvXisk-Px-3QXFVxdDYUYK1lKOmU7nTMs156eMAnRIJQdyjDXfNZMHY0vK4CNpthtza5AG7CXozaU1QJ954EaUr0jE2tjF6yZGZl32QFhbQDrVGZR7r7v-MG3FY8piitlvCK39tXu8EbYgifVEFpdEM1gcH1M6duBUh4k2eS79l5o2oz-1Gi8A7IB-aYP8r44nY7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/90 via-surface/30 to-transparent flex items-end p-space-md">
+<span class="text-label-md text-on-surface font-['Plus_Jakarta_Sans']">Interactive Habitat: Arid Desert Ecosystem</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Types of Ecosystems Explorer -->
+<section class="py-space-xl max-w-7xl mx-auto px-gutter w-full" id="habitat-diversity">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-label-lg text-primary uppercase font-['Plus_Jakarta_Sans']">Habitat Diversity</span>
+<h2 class="font-headline-lg text-on-surface mt-2 font-['Space_Grotesk']">Types of Ecosystems</h2>
+<p class="text-body-md text-on-surface-variant mt-space-sm font-['Plus_Jakarta_Sans']">Switch between major terrestrial, aquatic, and artificial biomes to discover unique species adaptations.</p>
+</div>
+<!-- Ecosystem Tabs -->
+<div class="flex flex-wrap justify-center gap-space-sm mb-space-xl">
+<button class="biome-tab px-space-lg py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] transition-all bg-primary text-on-primary shadow-[0_0_20px_rgba(78,222,163,0.3)] cursor-pointer" id="btn-forest" onclick="switchBiome('forest')">Forest</button>
+<button class="biome-tab px-space-lg py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] transition-all bg-surface-variant text-on-surface-variant hover:text-on-surface cursor-pointer" id="btn-aquatic" onclick="switchBiome('aquatic')">Aquatic</button>
+<button class="biome-tab px-space-lg py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] transition-all bg-surface-variant text-on-surface-variant hover:text-on-surface cursor-pointer" id="btn-grassland" onclick="switchBiome('grassland')">Grassland</button>
+<button class="biome-tab px-space-lg py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] transition-all bg-surface-variant text-on-surface-variant hover:text-on-surface cursor-pointer" id="btn-desert" onclick="switchBiome('desert')">Desert</button>
+<button class="biome-tab px-space-lg py-3 rounded-xl font-label-lg font-['Plus_Jakarta_Sans'] transition-all bg-surface-variant text-on-surface-variant hover:text-on-surface cursor-pointer" id="btn-artificial" onclick="switchBiome('artificial')">Artificial</button>
+</div>
+<!-- Biome Content Display -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded-3xl p-space-xl border border-primary/20 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center shadow-[0_0_50px_rgba(0,0,0,0.5)]" id="biome-content">
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1 rounded-full w-max text-label-md font-['Plus_Jakarta_Sans']">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+<span class="" id="biome-tag">Terrestrial Biome</span>
+</div>
+<h3 class="font-headline-lg text-on-surface text-3xl font-['Space_Grotesk']" id="biome-title">Temperate &amp; Tropical Forests</h3>
+<p class="text-body-md text-on-surface-variant font-['Plus_Jakarta_Sans']" id="biome-desc">
+          Forest ecosystems feature high density of trees covering vast areas. They play a critical role in global carbon sequestration, housing over 80% of terrestrial biodiversity including apex predators, birds, insects, and complex fungal networks.
+        </p>
+<div class="grid grid-cols-2 gap-space-md mt-space-md">
+<div class="bg-surface/60 p-space-md rounded-xl border border-outline/10">
+<span class="text-label-md text-on-surface-variant uppercase font-['Plus_Jakarta_Sans']">Key Species</span>
+<span class="font-headline-sm text-on-surface text-lg block mt-1 font-['Space_Grotesk']" id="biome-species">Jaguars, Oak Trees, Fungi</span>
+</div>
+<div class="bg-surface/60 p-space-md rounded-xl border border-outline/10">
+<span class="text-label-md text-on-surface-variant uppercase font-['Plus_Jakarta_Sans']">Annual Rainfall</span>
+<span class="font-headline-sm text-on-surface text-lg block mt-1 font-['Space_Grotesk']" id="biome-rainfall">1,000 - 2,000+ mm</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 h-80 rounded-2xl overflow-hidden shadow-2xl relative border border-outline/10">
+<img alt="Habitat ecosystem display" class="w-full h-full object-cover transition-opacity duration-300" id="biome-img" src="https://lh3.googleusercontent.com/aida/AEtjO1UuzFTcWupqTWvY2juauli4x3p_yipEvyc-oQ2U-4Dk8OGDqQVYz4oiyG97bR20FtzbS2sy5C5QOIM-p_nWZJnW5K7S7gFCHoUTab7_9KVID4wzd8iHmHIjNUMLvoQuiPC4WuWzh6ecGmNDyfJJVypxJRs-EdGN0LIKsZGRCxxVChcOPbbclC7yhaZyLRfnlz8pzLNHyfK_Lhen00AUdWtWocWOUdV3_1GicE02_5zwfBEK-3s4-I0f5STX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/60 to-transparent pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Energy Flow & Trophic Levels -->
+<section class="py-space-xl max-w-7xl mx-auto px-gutter w-full">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-label-lg text-secondary uppercase font-['Plus_Jakarta_Sans']">Thermodynamics in Nature</span>
+<h2 class="font-headline-lg text-on-surface mt-2 font-['Space_Grotesk']">Energy Flow &amp; Trophic Levels</h2>
+<p class="text-body-md text-on-surface-variant mt-space-sm font-['Plus_Jakarta_Sans']">Observe how energy diminishes by 90% at each step up the pyramid according to Lindeman's 10% Rule.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Interactive Pyramid Visual -->
+<div class="lg:col-span-7 flex flex-col gap-3" id="trophic-pyramid-container">
+<!-- Level 4: Apex Predators -->
+<div class="trophic-level cursor-pointer bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded-2xl border border-tertiary/30 hover:border-tertiary hover:shadow-[0_0_25px_rgba(255,185,95,0.2)] transition-all flex items-center justify-between group" data-level="apex" id="trophic-card-apex" onclick="selectTrophic('apex')" role="button" tabindex="0">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary/20 flex items-center justify-center text-tertiary font-headline-sm font-['Space_Grotesk']">4</div>
+<div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk']">Apex Predators</h4>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Tertiary Consumers (Eagles, Lions, Sharks)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-tertiary font-['Space_Grotesk']">10 Joules</span>
+<span class="text-label-md text-on-surface-variant block font-['Plus_Jakarta_Sans']">0.1% of Solar Energy</span>
+</div>
+</div>
+<!-- Level 3: Secondary Consumers -->
+<div class="trophic-level cursor-pointer bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded-2xl border border-secondary/30 hover:border-secondary hover:shadow-[0_0_25px_rgba(76,215,246,0.2)] transition-all flex items-center justify-between group" data-level="secondary" id="trophic-card-secondary" onclick="selectTrophic('secondary')" role="button" tabindex="0">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary font-headline-sm font-['Space_Grotesk']">3</div>
+<div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk']">Secondary Consumers</h4>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Carnivores (Snakes, Frogs, Small Carnivores)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-secondary font-['Space_Grotesk']">100 Joules</span>
+<span class="text-label-md text-on-surface-variant block font-['Plus_Jakarta_Sans']">1% of Solar Energy</span>
+</div>
+</div>
+<!-- Level 2: Primary Consumers -->
+<div class="trophic-level cursor-pointer bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded-2xl border border-primary/30 hover:border-primary hover:shadow-[0_0_25px_rgba(78,222,163,0.2)] transition-all flex items-center justify-between group" data-level="primary" id="trophic-card-primary" onclick="selectTrophic('primary')" role="button" tabindex="0">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-headline-sm font-['Space_Grotesk']">2</div>
+<div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk']">Primary Consumers</h4>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Herbivores (Rabbits, Insects, Deer)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-primary font-['Space_Grotesk']">1,000 Joules</span>
+<span class="text-label-md text-on-surface-variant block font-['Plus_Jakarta_Sans']">10% of Solar Energy</span>
+</div>
+</div>
+<!-- Level 1: Producers -->
+<div class="trophic-level cursor-pointer bg-surface-container-low/90 backdrop-blur-xl p-space-md rounded-2xl border-2 border-primary shadow-[0_0_30px_rgba(78,222,163,0.35)] transition-all flex items-center justify-between group" data-level="producer" id="trophic-card-producer" onclick="selectTrophic('producer')" role="button" tabindex="0">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/30 flex items-center justify-center text-primary font-headline-sm font-['Space_Grotesk']">1</div>
+<div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk']">Producers (Autotrophs)</h4>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">Green Plants &amp; Phytoplankton</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-primary font-['Space_Grotesk']">10,000 Joules</span>
+<span class="text-label-md text-on-surface-variant block font-['Plus_Jakarta_Sans']">100% Captured Solar Energy</span>
+</div>
+</div>
+</div>
+<!-- Trophic Explanation Panel -->
+<div class="lg:col-span-5 bg-surface-container-low/90 backdrop-blur-xl p-space-xl rounded-3xl border border-primary/30 shadow-[0_0_35px_rgba(0,0,0,0.4)] flex flex-col gap-space-md sticky top-24">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary" id="trophic-icon-wrapper">
+<span class="material-symbols-outlined text-[26px]" id="trophic-icon">nest_eco_leaf</span>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-md bg-surface-variant font-['Plus_Jakarta_Sans'] text-primary" id="trophic-badge">Trophic Level 1</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface font-['Space_Grotesk'] text-2xl" id="trophic-title">Producers (Autotrophs)</h3>
+<p class="text-body-sm text-primary mt-1 font-['Plus_Jakarta_Sans'] font-medium" id="trophic-organisms">Examples: Terrestrial Grasses, Trees, Green Plants &amp; Phytoplankton</p>
+</div>
+<p class="text-body-md text-on-surface-variant font-['Plus_Jakarta_Sans']" id="trophic-desc">
+          Chlorophyll-bearing plants capturing photons directly through photosynthesis, transforming radiant solar energy into stable chemical glucose. They provide the indispensable foundation for terrestrial and aquatic biomes alike.
+        </p>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface/60 p-space-md rounded-xl border border-outline/10">
+<span class="text-label-md text-on-surface-variant block uppercase font-['Plus_Jakarta_Sans']">Energy Retained</span>
+<span class="font-headline-sm text-primary text-lg block mt-0.5 font-['Space_Grotesk']" id="trophic-joules">10,000 Joules</span>
+</div>
+<div class="bg-surface/60 p-space-md rounded-xl border border-outline/10">
+<span class="text-label-md text-on-surface-variant block uppercase font-['Plus_Jakarta_Sans']">% Solar Available</span>
+<span class="font-headline-sm text-secondary text-lg block mt-0.5 font-['Space_Grotesk']" id="trophic-percent">100% (Baseline)</span>
+</div>
+</div>
+<div class="bg-surface/50 p-space-md rounded-xl mt-space-xs border border-outline/10">
+<div class="flex items-center gap-2 mb-1 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="text-label-md uppercase font-['Plus_Jakarta_Sans'] font-semibold">Lindeman's 10% Efficiency Rule</span>
+</div>
+<p class="text-body-sm text-on-surface font-['Plus_Jakarta_Sans']" id="trophic-rule">Captures 100% of the solar energy entering the biological food chain. Only 10% will successfully transfer into herbivore tissue.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Food Web Simulator -->
+<section class="py-space-xl max-w-7xl mx-auto px-gutter w-full" id="food-web">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-label-lg text-primary uppercase font-['Plus_Jakarta_Sans']">Ecosystem Dynamics</span>
+<h2 class="font-headline-lg text-on-surface mt-2 font-['Space_Grotesk']">Interactive Food Web Simulator</h2>
+<p class="text-body-md text-on-surface-variant mt-space-sm font-['Plus_Jakarta_Sans']">Click nodes to trace energy pathways from grassland producers up to apex raptors and predators.</p>
+</div>
+<div class="bg-surface-container-low/90 backdrop-blur-xl rounded-3xl p-space-xl border border-primary/20 shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col lg:flex-row gap-space-xl items-start">
+<!-- Web Nodes Grid -->
+<div class="flex-1 grid grid-cols-2 md:grid-cols-3 gap-space-md w-full" id="food-web-grid">
+<!-- Grass & Shrubs -->
+<div class="food-node cursor-pointer bg-surface/80 p-space-lg rounded-2xl border-2 border-primary shadow-[0_0_25px_rgba(78,222,163,0.4)] transition-all text-center select-none group" data-node="grass" id="node-grass" onclick="highlightNode('grass')" role="button" tabindex="0">
+<div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">grass</span>
+</div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk'] text-lg">Grass &amp; Shrubs</h4>
+<span class="text-label-md text-primary block mt-1 font-['Plus_Jakarta_Sans']">Primary Producer</span>
+</div>
+<!-- Rabbit -->
+<div class="food-node cursor-pointer bg-surface/80 p-space-lg rounded-2xl border border-outline/20 hover:border-secondary hover:shadow-[0_0_20px_rgba(76,215,246,0.3)] transition-all text-center select-none group" data-node="rabbit" id="node-rabbit" onclick="highlightNode('rabbit')" role="button" tabindex="0">
+<div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-secondary/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">cruelty_free</span>
+</div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk'] text-lg">Rabbit</h4>
+<span class="text-label-md text-secondary block mt-1 font-['Plus_Jakarta_Sans']">Primary Consumer</span>
+</div>
+<!-- Grasshopper -->
+<div class="food-node cursor-pointer bg-surface/80 p-space-lg rounded-2xl border border-outline/20 hover:border-secondary hover:shadow-[0_0_20px_rgba(76,215,246,0.3)] transition-all text-center select-none group" data-node="grasshopper" id="node-grasshopper" onclick="highlightNode('grasshopper')" role="button" tabindex="0">
+<div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-secondary/20 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">pest_control</span>
+</div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk'] text-lg">Grasshopper</h4>
+<span class="text-label-md text-secondary block mt-1 font-['Plus_Jakarta_Sans']">Primary Consumer</span>
+</div>
+<!-- Frog -->
+<div class="food-node cursor-pointer bg-surface/80 p-space-lg rounded-2xl border border-outline/20 hover:border-tertiary hover:shadow-[0_0_20px_rgba(255,185,95,0.3)] transition-all text-center select-none group" data-node="frog" id="node-frog" onclick="highlightNode('frog')" role="button" tabindex="0">
+<div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-tertiary/20 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">water_drop</span>
+</div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk'] text-lg">Frog</h4>
+<span class="text-label-md text-tertiary block mt-1 font-['Plus_Jakarta_Sans']">Secondary Consumer</span>
+</div>
+<!-- Snake -->
+<div class="food-node cursor-pointer bg-surface/80 p-space-lg rounded-2xl border border-outline/20 hover:border-tertiary hover:shadow-[0_0_20px_rgba(255,185,95,0.3)] transition-all text-center select-none group" data-node="snake" id="node-snake" onclick="highlightNode('snake')" role="button" tabindex="0">
+<div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-tertiary/20 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">emergency</span>
+</div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk'] text-lg">Snake</h4>
+<span class="text-label-md text-tertiary block mt-1 font-['Plus_Jakarta_Sans']">Secondary Consumer</span>
+</div>
+<!-- Golden Eagle -->
+<div class="food-node cursor-pointer bg-surface/80 p-space-lg rounded-2xl border border-outline/20 hover:border-primary hover:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all text-center select-none group" data-node="goldeneagle" id="node-goldeneagle" onclick="highlightNode('goldeneagle')" role="button" tabindex="0">
+<div class="w-14 h-14 mx-auto mb-3 rounded-2xl bg-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[32px]">flight</span>
+</div>
+<h4 class="font-headline-sm text-on-surface font-['Space_Grotesk'] text-lg">Golden Eagle</h4>
+<span class="text-label-md text-primary block mt-1 font-['Plus_Jakarta_Sans']">Apex Predator</span>
+</div>
+</div>
+<!-- Simulation Inspector -->
+<div class="w-full lg:w-96 bg-surface/90 p-space-xl rounded-2xl border border-primary/30 shadow-[0_0_35px_rgba(0,0,0,0.3)] flex flex-col gap-space-md sticky top-24">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+<span class="font-label-lg uppercase font-['Plus_Jakarta_Sans'] font-semibold">Node Inspector</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full text-label-md bg-primary/10 text-primary font-['Plus_Jakarta_Sans']" id="inspector-badge">Active Node</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary" id="inspector-icon-wrap">
+<span class="material-symbols-outlined text-[26px]" id="inspector-icon">grass</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface font-['Space_Grotesk'] text-xl" id="inspector-title">Grass &amp; Shrubs</h3>
+<span class="text-label-md text-primary font-['Plus_Jakarta_Sans']" id="inspector-role">Primary Producer</span>
+</div>
+</div>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']" id="inspector-desc">Autotrophic terrestrial vegetation harnessing sunlight, water, and soil minerals to produce complex biomass supporting all grassland herbivores.</p>
+<!-- Detailed Nutritional Interactions -->
+<div class="flex flex-col gap-2 pt-2 border-t border-outline/10">
+<div class="bg-surface-container-high/60 p-2.5 rounded-xl">
+<div class="flex items-center gap-1.5 text-secondary text-label-md font-['Plus_Jakarta_Sans'] mb-0.5">
+<span class="material-symbols-outlined text-[16px]">subdirectory_arrow_right</span>
+<span>Energy Source / Consumes</span>
+</div>
+<p class="text-body-sm text-on-surface font-['Plus_Jakarta_Sans']" id="inspector-source">Solar radiation, atmospheric CO2 &amp; soil minerals.</p>
+</div>
+<div class="bg-surface-container-high/60 p-2.5 rounded-xl">
+<div class="flex items-center gap-1.5 text-tertiary text-label-md font-['Plus_Jakarta_Sans'] mb-0.5">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+<span>Preyed Upon By</span>
+</div>
+<p class="text-body-sm text-on-surface font-['Plus_Jakarta_Sans']" id="inspector-predators">Rabbits, grasshoppers, grazing rodents, and deer.</p>
+</div>
+</div>
+<div class="border-t border-outline/10 pt-space-sm">
+<span class="text-label-md text-error uppercase font-['Plus_Jakarta_Sans'] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">crisis_alert</span>
+          Ecosystem Stability Impact
+        </span>
+<p class="text-body-sm text-on-surface-variant mt-1 font-['Plus_Jakarta_Sans']" id="inspector-impact">A severe drought destroying grass cover immediately deprives herbivores of calories, cascading into famine across secondary predators and top raptors.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Environmental Impact & Biomagnification -->
+<section class="py-space-xl max-w-7xl mx-auto px-gutter w-full">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-label-lg text-error uppercase font-['Plus_Jakarta_Sans']">Human Intervention</span>
+<h2 class="font-headline-lg text-on-surface mt-2 font-['Space_Grotesk']">Environmental Impact &amp; Biomagnification</h2>
+<p class="text-body-md text-on-surface-variant mt-space-sm font-['Plus_Jakarta_Sans']">Understand how pollutants and toxic chemicals magnify in concentration as they move up trophic levels.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-xl">
+<!-- Card 1: Biological Magnification -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-xl rounded-3xl border border-error/20 hover:shadow-[0_0_30px_rgba(255,180,171,0.15)] transition-all flex flex-col justify-between overflow-hidden group">
+<div>
+<div class="h-44 -mx-space-xl -mt-space-xl mb-space-md overflow-hidden relative border-b border-error/20">
+<img alt="Biological Magnification in aquatic food chain" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xtq88DUCh6KyOB42g3wPLoKpSwNHPHXONVX9tikl35xWiSTIOk3LJqIbRYen8z25PM-G2Ipo6AfVAUkMMzNjWK2zlpi-8dUKcryaYy0061zALKzsCmRMAs08BKYnOx9zd2FP1Pm-gTJy7AQLJecIOUfSPliIWOxv5NUkt_Qu_4h8tJPoxbenPUJNGDG0VIsf-6kttWhnmU-IZ_HKljB8elOIQTZj1uXw79CxdrBRgDUtu9l5HmCia8uRYk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error/20 flex items-center justify-center text-error mb-space-md">
+<span class="material-symbols-outlined text-[24px]">science</span>
+</div>
+<h3 class="font-headline-sm text-on-surface text-xl mb-2 font-['Space_Grotesk']">Biological Magnification</h3>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">
+            Non-biodegradable chemicals such as pesticides (DDT) and heavy metals increase in concentration at each successive trophic level.
+          </p>
+</div>
+<div class="mt-space-lg bg-surface/50 p-space-md rounded-xl border border-error/10">
+<span class="text-label-md text-error block font-['Plus_Jakarta_Sans']">Apex Impact</span>
+<span class="text-body-sm text-on-surface font-['Plus_Jakarta_Sans']">Highest toxin concentration found in top carnivores and birds of prey.</span>
+</div>
+</div>
+<!-- Card 2: Ozone Layer Depletion -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-xl rounded-3xl border border-tertiary/20 hover:shadow-[0_0_30px_rgba(255,185,95,0.15)] transition-all flex flex-col justify-between overflow-hidden group">
+<div>
+<div class="h-44 -mx-space-xl -mt-space-xl mb-space-md overflow-hidden relative border-b border-tertiary/20">
+<img alt="Earth stratosphere and ozone layer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1XUI6JpbDUU-UyLJx--Ydxda5rxDeTxxOVweOdId-bIzhPd_Fb6mcSlFuj5sM6vJ7ZGKMr9vxmDOIxJHpgWvSYbEA3NjnZQhs5D_SWsR_cn0g4pZ8ZwHAjqyfdRLQI-NBJuxS35e8zmbtPjovbTKTFcM9Q_xZdjtq0kNZxWG3A5_Ek5XQHv4VfXJx5k30ixmK3dwUHJOa3mrNzoVLZM2GxcCEI6BUW7_LGhaSWLd61LKGQP2TgK4Vkj1qqM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary/20 flex items-center justify-center text-tertiary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">view_in_ar_new</span>
+</div>
+<h3 class="font-headline-sm text-on-surface text-xl mb-2 font-['Space_Grotesk']">Ozone Layer Depletion</h3>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">
+            Chlorofluorocarbons (CFCs) release chlorine atoms in the stratosphere, breaking down protective ozone molecules and increasing UV radiation.
+          </p>
+</div>
+<div class="mt-space-lg bg-surface/50 p-space-md rounded-xl border border-tertiary/10">
+<span class="text-label-md text-tertiary block font-['Plus_Jakarta_Sans']">Consequence</span>
+<span class="text-body-sm text-on-surface font-['Plus_Jakarta_Sans']">Skin cancer risks, reduced phytoplankton productivity, and climate shifts.</span>
+</div>
+</div>
+<!-- Card 3: Waste & Garbage Disposal -->
+<div class="bg-surface-container-low/90 backdrop-blur-xl p-space-xl rounded-3xl border border-secondary/20 hover:shadow-[0_0_30px_rgba(76,215,246,0.15)] transition-all flex flex-col justify-between overflow-hidden group">
+<div>
+<div class="h-44 -mx-space-xl -mt-space-xl mb-space-md overflow-hidden relative border-b border-secondary/20">
+<img alt="Coastal pollution and plastic waste recycling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WaJfxR8vBLdH5hPyEq96Xx-fV-WUyhLS3L9JS7acYTIeLRqxA37zTMsRlevMDLRaKX8Z9z9bt-_k29y0ErG6DqlbqnxqaIK4GgpoA3mRvtZjgbeoDzmZyWs1IrFuFp4dM2U25C4DdccmJb6uX9IiRVoXYPgaTUjiLyEf7k4DJWuIiqaQWx2fokh50-ATPhTaU47iVoDP7LllsAA74AbeQ7l4yjoiVMDGtCunRQ_6ucKrWMsMx8882Nkh0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[32px]">delete_sweep</span>
+</div>
+<h3 class="font-headline-sm text-on-surface text-xl mb-2 font-['Space_Grotesk']">Waste &amp; Garbage Disposal</h3>
+<p class="text-body-sm text-on-surface-variant font-['Plus_Jakarta_Sans']">
+            Accumulation of non-biodegradable plastics and electronic waste choking terrestrial and marine ecosystems, destroying natural habitats.
+          </p>
+</div>
+<div class="mt-space-lg bg-surface/50 p-space-md rounded-xl border border-secondary/10">
+<span class="text-label-md text-secondary block font-['Plus_Jakarta_Sans']">Solution</span>
+<span class="text-body-sm text-on-surface font-['Plus_Jakarta_Sans']">Adopting the 4 R's: Refuse, Reduce, Reuse, and Recycle.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Custom Scrollbar -->
+<style>
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b1326;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4edea3;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #4edea3;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6ffbbe;
+    }
+  </style>
+</div><script>document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth' }); } }); });</script></main><footer class="py-space-lg text-center text-body-sm text-on-surface-variant border-t border-outline/10 bg-surface-container-lowest font-['Plus_Jakarta_Sans']">MADE BY SUBHASH, NISHANTH, SAI MAYOOKH, SASANTH, RAMTEJ</footer>
+<!-- Fully Interactive Script -->
+<script>
+  // Biome Data
+  const biomes = {
+    forest: {
+      tag: "Terrestrial Biome",
+      title: "Temperate & Tropical Forests",
+      desc: "Forest ecosystems feature high density of trees covering vast areas. They play a critical role in global carbon sequestration, housing over 80% of terrestrial biodiversity including apex predators, birds, insects, and complex fungal networks.",
+      species: "Jaguars, Oak Trees, Fungi",
+      rainfall: "1,000 - 2,000+ mm",
+      img: "https://lh3.googleusercontent.com/aida/AEtjO1UuzFTcWupqTWvY2juauli4x3p_yipEvyc-oQ2U-4Dk8OGDqQVYz4oiyG97bR20FtzbS2sy5C5QOIM-p_nWZJnW5K7S7gFCHoUTab7_9KVID4wzd8iHmHIjNUMLvoQuiPC4WuWzh6ecGmNDyfJJVypxJRs-EdGN0LIKsZGRCxxVChcOPbbclC7yhaZyLRfnlz8pzLNHyfK_Lhen00AUdWtWocWOUdV3_1GicE02_5zwfBEK-3s4-I0f5STX"
+    },
+    aquatic: {
+      tag: "Aquatic Biome",
+      title: "Marine & Freshwater Ecosystems",
+      desc: "Covering over 70% of Earth's surface, aquatic ecosystems range from deep ocean coral reefs to freshwater lakes and rivers. Phytoplankton produce over 50% of atmospheric oxygen through photosynthesis.",
+      species: "Coral, Phytoplankton, Sharks",
+      rainfall: "Aquatic (Unlimited)",
+      img: "https://lh3.googleusercontent.com/aida/AEtjO1W7v0bq2K5kgq_YymxO4qqC-mxBRsnJCYqCN_575oAT5Y87ooViV239GaUurMoLSFxwwc4BfZsAhb0LBFXgUkuTwMZtOB2WXRMFvTNYiTBoO71YAG0jMBybQcLglBY8CyXvFbki7apcsakwpueNKKJr9hymzMQEu5_Lk7yDEx3s11n5-YkD4xzNC_kXg4-FPvAvFmVpjGR-oRBz5XFtgk-OUmBSDNhQM_1WfGE0BGhVjckQHcmzfBjfbZyl"
+    },
+    grassland: {
+      tag: "Terrestrial Biome",
+      title: "Savannas & Temperate Grasslands",
+      desc: "Dominated by grasses rather than large shrubs or trees. Characterized by moderate rainfall and grazing herbivores that support large carnivores in complex predator-prey loops.",
+      species: "Bison, Zebras, Grasses",
+      rainfall: "500 - 900 mm",
+      img: "https://lh3.googleusercontent.com/aida/AEtjO1XH5Tgud35EZsRmgj5psTbDn4LZWLl6CNjyVJVASm8eUp3A1lil7w6jgKwHsjNQPAC5QoGRuKonHaAwc1wfbSBK9v1LAJgTSJuCUKP_kSR4hUrt8ON5OF9duD4hwm2X096e6sq6lpi-2L4zUlUmq44L69U3gxjCMqsE58hVXVS77c2ykRN_k3ljhpByXOAVJ8yTALokAoT_tG9lCG6-XvFTvYcQA-vNIYbxQQTAAywfjMC5yaLDlKcS1V4"
+    },
+    desert: {
+      tag: "Terrestrial Biome",
+      title: "Arid & Semi-Arid Deserts",
+      desc: "Extremely low precipitation with specialized xerophytic vegetation and nocturnal fauna adapted to extreme temperature fluctuations and water conservation.",
+      species: "Cacti, Scorpions, Camels",
+      rainfall: "Under 250 mm",
+      img: "https://lh3.googleusercontent.com/aida/AEtjO1XHj_lQMdJfKur0ZwiU2GnxcesO_9gCVqP_B0LSlZyuOMapFVcyrX_awvXisk-Px-3QXFVxdDYUYK1lKOmU7nTMs156eMAnRIJQdyjDXfNZMHY0vK4CNpthtza5AG7CXozaU1QJ954EaUr0jE2tjF6yZGZl32QFhbQDrVGZR7r7v-MG3FY8piitlvCK39tXu8EbYgifVEFpdEM1gcH1M6duBUh4k2eS79l5o2oz-1Gi8A7IB-aYP8r44nY7"
+    },
+    artificial: {
+      tag: "Man-Made Biome",
+      title: "Agricultural Farms & Aquariums",
+      desc: "Ecosystems created and maintained by human intervention. While lacking natural biodiversity resilience, they are vital for crop production and controlled biological research.",
+      species: "Crops, Livestock, Algae",
+      rainfall: "Managed / Irrigated",
+      img: "https://lh3.googleusercontent.com/aida/AEtjO1WY2vMooPmbn3xfU8SNv4DVBdcb5c2f4vMkuwDDBRfEF66qMRLa3EvqLJ49N_RQNHeAxHouT8VNsI3ouoIUexq7JfVbbsOj6bAQEFhZl3HVfNrVeOhYJZSUGhqRy6xKvuuaBwOfh_F-pfNchU_JrEq_SMJaqN10Gm3MRKM-bUihZSxvoEiLhQw-_hzTADKO4DhUdqoMP25CmnbF0NGkX1f10HpwIHD3fsV8MkyAbtGs1nWPwQsO_i7c37PF"
+    }
+  };
+
+  function switchBiome(type) {
+    document.querySelectorAll('.biome-tab').forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-[0_0_20px_rgba(78,222,163,0.3)]');
+      btn.classList.add('bg-surface-variant', 'text-on-surface-variant');
+    });
+    const activeBtn = document.getElementById('btn-' + type);
+    if (activeBtn) {
+      activeBtn.classList.remove('bg-surface-variant', 'text-on-surface-variant');
+      activeBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-[0_0_20px_rgba(78,222,163,0.3)]');
+    }
+
+    const data = biomes[type];
+    if (data) {
+      const tagEl = document.getElementById('biome-tag');
+      const titleEl = document.getElementById('biome-title');
+      const descEl = document.getElementById('biome-desc');
+      const speciesEl = document.getElementById('biome-species');
+      const rainfallEl = document.getElementById('biome-rainfall');
+      const imgEl = document.getElementById('biome-img');
+
+      if (tagEl) tagEl.textContent = data.tag;
+      if (titleEl) titleEl.textContent = data.title;
+      if (descEl) descEl.textContent = data.desc;
+      if (speciesEl) speciesEl.textContent = data.species;
+      if (rainfallEl) rainfallEl.textContent = data.rainfall;
+      if (imgEl) {
+        imgEl.style.opacity = '0.4';
+        setTimeout(() => {
+          imgEl.src = data.img;
+          imgEl.style.opacity = '1';
+        }, 150);
+      }
+    }
+  }
+
+  // Trophic Pyramid Data
+  const trophicInfo = {
+    apex: {
+      badge: "Trophic Level 4 (Top)",
+      title: "Apex Predators (Tertiary Consumers)",
+      icon: "military_tech",
+      organisms: "Examples: Eagles, Lions, Sharks & Hawks",
+      joules: "10 Joules",
+      percent: "0.1% of Solar Energy",
+      desc: "Top carnivores occupy the very summit of the trophic pyramid with no natural predators. Because only a minute fraction of chemical energy reaches this tier, apex populations are naturally low and depend on extensive hunting ranges.",
+      rule: "At this 4th step, 99.9% of initial solar energy has been lost through cellular respiration and heat."
+    },
+    secondary: {
+      badge: "Trophic Level 3",
+      title: "Secondary Consumers (Carnivores)",
+      icon: "cruelty_free",
+      organisms: "Examples: Snakes, Frogs, Lizards & Small Carnivores",
+      joules: "100 Joules",
+      percent: "1.0% of Solar Energy",
+      desc: "Carnivores and insectivores that feed directly upon herbivores. They convert herbivore tissue into carnivore biomass while burning the vast majority of caloric intake through locomotion and metabolic warmth.",
+      rule: "Receives 1,000 Joules from herbivores, retaining only 100 Joules for transfer to apex predators (90% lost)."
+    },
+    primary: {
+      badge: "Trophic Level 2",
+      title: "Primary Consumers (Herbivores)",
+      icon: "pest_control",
+      organisms: "Examples: Rabbits, Insects (Grasshoppers), Deer & Rodents",
+      joules: "1,000 Joules",
+      percent: "10.0% of Solar Energy",
+      desc: "Herbivores that feed directly on producers. They convert fibrous plant sugars into animal protein, forming the crucial link between photosynthetic vegetation and carnivorous wildlife.",
+      rule: "Herbivores assimilate approximately 10% of plant calories into living body mass, losing 90% as digestive heat and waste."
+    },
+    producer: {
+      badge: "Trophic Level 1 (Base)",
+      title: "Producers (Autotrophs)",
+      icon: "nest_eco_leaf",
+      organisms: "Examples: Green Plants, Terrestrial Grasses, Trees & Phytoplankton",
+      joules: "10,000 Joules",
+      percent: "100% (Baseline)",
+      desc: "Chlorophyll-bearing plants capturing photons directly through photosynthesis, transforming radiant solar energy into stable chemical glucose. They provide the indispensable foundation for terrestrial and aquatic biomes alike.",
+      rule: "Captures 100% of the solar energy entering the biological food chain. Only 10% will successfully transfer into herbivore tissue."
+    }
+  };
+
+  function selectTrophic(level) {
+    const data = trophicInfo[level];
+    if (!data) return;
+
+    // Reset styles on all trophic level cards
+    document.querySelectorAll('.trophic-level').forEach(card => {
+      card.classList.remove(
+        'border-2', 'border-primary', 'border-secondary', 'border-tertiary',
+        'shadow-[0_0_30px_rgba(78,222,163,0.35)]',
+        'shadow-[0_0_30px_rgba(76,215,246,0.35)]',
+        'shadow-[0_0_30px_rgba(255,185,95,0.35)]'
+      );
+      if (card.id === 'trophic-card-apex') card.classList.add('border-tertiary/30');
+      else if (card.id === 'trophic-card-secondary') card.classList.add('border-secondary/30');
+      else card.classList.add('border-primary/30');
+    });
+
+    // Highlight selected card
+    const targetCard = document.getElementById('trophic-card-' + level);
+    if (targetCard) {
+      targetCard.classList.remove('border-tertiary/30', 'border-secondary/30', 'border-primary/30');
+      if (level === 'apex') {
+        targetCard.classList.add('border-2', 'border-tertiary', 'shadow-[0_0_30px_rgba(255,185,95,0.35)]');
+      } else if (level === 'secondary') {
+        targetCard.classList.add('border-2', 'border-secondary', 'shadow-[0_0_30px_rgba(76,215,246,0.35)]');
+      } else {
+        targetCard.classList.add('border-2', 'border-primary', 'shadow-[0_0_30px_rgba(78,222,163,0.35)]');
+      }
+    }
+
+    // Update side inspector
+    const titleEl = document.getElementById('trophic-title');
+    const badgeEl = document.getElementById('trophic-badge');
+    const orgEl = document.getElementById('trophic-organisms');
+    const joulesEl = document.getElementById('trophic-joules');
+    const percentEl = document.getElementById('trophic-percent');
+    const descEl = document.getElementById('trophic-desc');
+    const ruleEl = document.getElementById('trophic-rule');
+    const iconEl = document.getElementById('trophic-icon');
+
+    if (titleEl) titleEl.textContent = data.title;
+    if (badgeEl) badgeEl.textContent = data.badge;
+    if (orgEl) orgEl.textContent = data.organisms;
+    if (joulesEl) joulesEl.textContent = data.joules;
+    if (percentEl) percentEl.textContent = data.percent;
+    if (descEl) descEl.textContent = data.desc;
+    if (ruleEl) ruleEl.textContent = data.rule;
+    if (iconEl) iconEl.textContent = data.icon;
+  }
+
+  // Food Web Simulator Inspector Data (Grassland / Terrestrial)
+  const foodWebNodes = {
+    grass: {
+      name: "Grass & Shrubs",
+      role: "Primary Producer (Autotroph)",
+      icon: "grass",
+      accent: "primary",
+      desc: "Autotrophic terrestrial vegetation harnessing sunlight, water, and soil minerals to produce complex biomass supporting all grassland herbivores.",
+      source: "Solar radiation, atmospheric CO2 & soil minerals.",
+      predators: "Rabbits, grasshoppers, grazing rodents, and deer.",
+      impact: "A severe drought destroying grass cover immediately deprives herbivores of calories, cascading into famine across secondary predators and top raptors."
+    },
+    rabbit: {
+      name: "Rabbit",
+      role: "Primary Consumer (Herbivore)",
+      icon: "cruelty_free",
+      accent: "secondary",
+      desc: "Fast-breeding herbivorous mammal feeding on leafy vegetation, roots, and tender shoots, converting plant fibers into vital protein.",
+      source: "Grass, shrubs, wild clovers, and herbaceous roots.",
+      predators: "Snakes, foxes, coyotes, and golden eagles.",
+      impact: "A population crash in rabbits shifts predator attention to rodents and frogs, causing sharp fluctuations in mid-tier predator survival."
+    },
+    grasshopper: {
+      name: "Grasshopper",
+      role: "Primary Consumer (Herbivore)",
+      icon: "pest_control",
+      accent: "secondary",
+      desc: "Voracious herbivorous insect grazing continuously on fresh blade foliage, serving as the staple insect prey for amphibians and birds.",
+      source: "Grass foliage, fresh seedlings, and plant shoots.",
+      predators: "Frogs, lizards, small birds, and predatory beetles.",
+      impact: "Mass grasshopper swarms cause immediate regional crop devastation; however, their disappearance collapses amphibian and insectivore populations."
+    },
+    frog: {
+      name: "Frog",
+      role: "Secondary Consumer (Carnivore)",
+      icon: "water_drop",
+      accent: "tertiary",
+      desc: "Amphibian predator with a specialized projectile tongue engineered to snatch grasshoppers, crickets, and terrestrial invertebrates.",
+      source: "Live grasshoppers, flies, beetles, and small larvae.",
+      predators: "Garter snakes, predatory birds, and small mammals.",
+      impact: "Frogs serve as key biological bio-indicators of pesticide runoff. Their decline allows uncontrolled insect pest outbreaks."
+    },
+    snake: {
+      name: "Snake",
+      role: "Secondary Consumer (Carnivore)",
+      icon: "emergency",
+      accent: "tertiary",
+      desc: "Reptilian carnivorous predator using venom or constriction to prey upon amphibians, rodents, and young rabbits across fields.",
+      source: "Frogs, small rabbits, mice, and ground lizards.",
+      predators: "Golden eagles, hawks, and large carnivores.",
+      impact: "Removal of snakes triggers rapid rodent and amphibian overpopulation, increasing transmission of parasite-borne diseases."
+    },
+    goldeneagle: {
+      name: "Golden Eagle",
+      role: "Apex Predator (Top Carnivore)",
+      icon: "flight",
+      accent: "primary",
+      desc: "Apex avian raptor boasting massive wingspans, razor talons, and telescopic vision capable of spotting and hunting rabbits and snakes.",
+      source: "Live rabbits, ground rodents, snakes, and carrion.",
+      predators: "None (Adult eagles sit at the absolute top of the food web).",
+      impact: "As the top carnivore, eagles control mesopredator density. Heavily impacted by chemical bioaccumulation (DDT and lead ammunition toxicity)."
+    }
+  };
+
+  function highlightNode(nodeId) {
+    const data = foodWebNodes[nodeId];
+    if (!data) return;
+
+    // Reset styles on all node cards
+    document.querySelectorAll('.food-node').forEach(card => {
+      card.classList.remove(
+        'border-2', 'border-primary', 'border-secondary', 'border-tertiary',
+        'shadow-[0_0_25px_rgba(78,222,163,0.4)]',
+        'shadow-[0_0_25px_rgba(76,215,246,0.4)]',
+        'shadow-[0_0_25px_rgba(255,185,95,0.4)]'
+      );
+      card.classList.add('border-outline/20');
+    });
+
+    // Highlight target node
+    const target = document.getElementById('node-' + nodeId);
+    if (target) {
+      target.classList.remove('border-outline/20');
+      if (data.accent === 'primary') {
+        target.classList.add('border-2', 'border-primary', 'shadow-[0_0_25px_rgba(78,222,163,0.4)]');
+      } else if (data.accent === 'secondary') {
+        target.classList.add('border-2', 'border-secondary', 'shadow-[0_0_25px_rgba(76,215,246,0.4)]');
+      } else {
+        target.classList.add('border-2', 'border-tertiary', 'shadow-[0_0_25px_rgba(255,185,95,0.4)]');
+      }
+    }
+
+    // Update inspector card
+    const titleEl = document.getElementById('inspector-title');
+    const roleEl = document.getElementById('inspector-role');
+    const iconEl = document.getElementById('inspector-icon');
+    const descEl = document.getElementById('inspector-desc');
+    const sourceEl = document.getElementById('inspector-source');
+    const predEl = document.getElementById('inspector-predators');
+    const impactEl = document.getElementById('inspector-impact');
+
+    if (titleEl) titleEl.textContent = data.name;
+    if (roleEl) roleEl.textContent = data.role;
+    if (iconEl) iconEl.textContent = data.icon;
+    if (descEl) descEl.textContent = data.desc;
+    if (sourceEl) sourceEl.textContent = data.source;
+    if (predEl) predEl.textContent = data.predators;
+    if (impactEl) impactEl.textContent = data.impact;
+  }
+
+  // Key Event Listener fallback to ensure absolute robustness
+  document.addEventListener('DOMContentLoaded', function() {
+    // Attach event listeners to Trophic Level elements
+    document.querySelectorAll('.trophic-level').forEach(card => {
+      const level = card.getAttribute('data-level');
+      if (level) {
+        card.addEventListener('click', () => selectTrophic(level));
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectTrophic(level);
+          }
+        });
+      }
+    });
+
+    // Attach event listeners to Food Web nodes
+    document.querySelectorAll('.food-node').forEach(card => {
+      const node = card.getAttribute('data-node');
+      if (node) {
+        card.addEventListener('click', () => highlightNode(node));
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            highlightNode(node);
+          }
+        });
+      }
+    });
+  });
+</script>
+</body></html>
